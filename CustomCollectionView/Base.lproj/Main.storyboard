@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CustomCollectionView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2vp-4k-3an">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lyP-rT-6xA">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="414" id="Hka-od-dbV"/>
+                                        </constraints>
+                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VGA-PV-MvG">
+                                            <size key="itemSize" width="50" height="50"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="0zf-YS-KOY">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="GMK-T4-YI4">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </collectionViewCellContentView>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="lyP-rT-6xA" firstAttribute="top" secondItem="ELu-x1-OUa" secondAttribute="top" id="31C-3q-7g8"/>
+                                    <constraint firstItem="lyP-rT-6xA" firstAttribute="leading" secondItem="ELu-x1-OUa" secondAttribute="leading" id="EYl-Gk-jYe"/>
+                                    <constraint firstItem="lyP-rT-6xA" firstAttribute="trailing" secondItem="ELu-x1-OUa" secondAttribute="trailing" constant="414" id="FCR-xH-6bi"/>
+                                    <constraint firstItem="lyP-rT-6xA" firstAttribute="height" secondItem="2vp-4k-3an" secondAttribute="height" id="XuY-B8-7Bq"/>
+                                    <constraint firstItem="lyP-rT-6xA" firstAttribute="bottom" secondItem="ELu-x1-OUa" secondAttribute="bottom" constant="818" id="lXf-eM-gk8"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="ELu-x1-OUa"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="7dE-QK-R9u"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="2vp-4k-3an" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="DSG-Ha-qkx"/>
+                            <constraint firstItem="2vp-4k-3an" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ekx-yc-zMc"/>
+                            <constraint firstItem="2vp-4k-3an" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="JH0-5C-OKu"/>
+                            <constraint firstItem="2vp-4k-3an" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="vxQ-Us-IRN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cVWidth" destination="Hka-od-dbV" id="br9-YF-iA8"/>
+                        <outlet property="collectionView" destination="lyP-rT-6xA" id="MLg-ez-VRS"/>
+                        <outlet property="scrollView" destination="2vp-4k-3an" id="zdE-rH-sMd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+</document>
